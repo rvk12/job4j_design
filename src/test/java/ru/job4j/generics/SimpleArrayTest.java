@@ -11,14 +11,14 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class SimpleArrayTest {
 
     @Test
-    public void whenAddOneElementThenGetFirstReturnsThatElement(){
+    public void whenAddOneElementThenGetFirstReturnsThatElement() {
         SimpleArray<String> sa = new SimpleArray<>(5);
         sa.add("Samsung");
         assertThat(sa.get(0), is("Samsung"));
     }
 
     @Test
-    public void whenRemove(){
+    public void whenRemove() {
         SimpleArray<String> sa = new SimpleArray<>(5);
         sa.add("Samsung");
         sa.add("Pixel");
@@ -29,7 +29,7 @@ public class SimpleArrayTest {
     }
 
     @Test
-    public void whenSet(){
+    public void whenSet() {
         SimpleArray<String> sa = new SimpleArray<>(5);
         sa.add("Samsung");
         sa.add("Pixel");
@@ -54,7 +54,7 @@ public class SimpleArrayTest {
     }
 
     @Test
-    public void whenIterate(){
+    public void whenIterate() {
         SimpleArray<String> sa = new SimpleArray<>(10);
         sa.add("Samsung");
         sa.add("Pixel");

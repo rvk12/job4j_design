@@ -70,7 +70,7 @@ public class SimpleArrayTest {
         array.add("10");
         array.add("11");
         array.add("12");
-        assertThat(array.get(11),is("12"));
+        assertThat(array.get(11), is("12"));
     }
 
     @Test
@@ -80,6 +80,6 @@ public class SimpleArrayTest {
         array.add("second");
         array.add("third");
         array.add("fourth");
-        assertThat(array.get(3),is("fourth"));
+        assertThat(array.get(3), is("fourth"));
     }
 }

@@ -17,7 +17,7 @@ public class SimpleLinkedList<E> implements List<E> {
         Node<E> linkToLast = last;
         Node<E> newNode = new Node<>(linkToLast, value, null);
         last = newNode;
-        if(linkToLast == null) {
+        if (linkToLast == null) {
             first = newNode;
         } else {
             linkToLast.next = last;
@@ -29,8 +29,9 @@ public class SimpleLinkedList<E> implements List<E> {
     public E get(int index) {
         Objects.checkIndex(index, size);
         Node<E> element = first;
-        for(int i = 0; i < index; i++)
+        for (int i = 0; i < index; i++) {
             element = element.next;
+        }
         return element.item;
     }
 
@@ -49,7 +50,7 @@ public class SimpleLinkedList<E> implements List<E> {
 
             @Override
             public E next() {
-                if(modCount != expectedModCount) {
+                if (modCount != expectedModCount) {
                     throw new ConcurrentModificationException();
                 }
                 if (!hasNext()) {
