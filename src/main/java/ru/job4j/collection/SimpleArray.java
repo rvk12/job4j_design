@@ -22,7 +22,7 @@ public class SimpleArray<T> implements Iterable<T> {
 
     public void add(T model) {
         modCount++;
-        if(size == container.length) {
+        if (size == container.length) {
             container = grow();
         }
         container[size] = model;
@@ -46,7 +46,7 @@ public class SimpleArray<T> implements Iterable<T> {
 
             @Override
             public T next() {
-                if(modCount != expectedModCount) {
+                if (modCount != expectedModCount) {
                     throw new ConcurrentModificationException();
                 }
                 if (!hasNext()) {
